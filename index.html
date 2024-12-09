@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Sistema de Boletim</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Sistema de Boletim Acadêmico</h1>
+  </header>
+  
+  <main>
+    <section>
+      <table id="tabelaResultados">
+        <thead>
+          <tr>
+            <th colspan="6" scope="col" class="titulo-tabela">Boletim</th>
+            <th colspan="2">
+              <div class="campoBuscaContainer">
+                <input type="number" step="1" min="1" class="campoBusca" id="campoBusca" placeholder="Buscar aluno por ID"/> 
+                <button class="btn_buscar" id="botaoBusca">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </th>
+            
+          </tr>
+          
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome do Aluno</th>
+            <th scope="col">1° Nota</th>
+            <th scope="col">2° Nota</th>
+            <th scope="col">3° Nota</th>
+            <th scope="col">Média Final</th>
+            <th scope="col">Situação</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dados -->
+        </tbody>
+      </table>
+    </section>
+    
+  </main>
+
+  <aside>
+    <section class="cadastro">
+      <h2>Cadastrar Aluno</h2>
+      <form id="formularioCadastro" class="org">
+
+        <div class="field">
+            <label for="nome">Nome do Aluno</label>
+            <input type="text" id="nome" placeholder="Nome" required>
+        </div>
+
+        <div class="field">
+            <label for="nota1">1° Nota</label>
+            <input type="number" id="nota1" step="0.1" min="0.1" max="10" placeholder="N1" required>
+        </div>
+
+        <div class="field">
+            <label for="nota2">2° Nota</label>
+            <input type="number" id="nota2" step="0.1" min="0.1" max="10" placeholder="N2" required>
+        </div>
+
+        <div class="field">
+          <label for="nota3">3° Nota</label>
+          <input type="number" id="nota3" step="0.1" min="0.1" max="10" placeholder="N3" required>
+      </div>
+
+        <div class="field">
+            <button id="addStudentButton" class="btn_cadastro" type="submit">Cadastrar</button>
+        </div>
+    </form>
+    </section>
+
+    <section class="filtros">
+      <h2>Filtros</h2>
+      <div class="org">
+          <div class="field">
+              <button id="mostrarTodos">Mostrar Todos</button>
+              <button id="mostrarAprovados">Mostrar Aprovados</button>
+              <button id="mostrarReprovados">Mostrar Reprovados</button>
+              <button id="mostrarRecuperacao">Mostrar Recuperação</button>
+          </div>
+      </div>
+    </section>
+
+    <section class="grafico">
+      <h2>Gráfico de Situação dos Alunos</h2>
+      <div class="chart-container">
+        <canvas id="graficoPizza"></canvas>
+      </div>
+    </section>
+
+  </aside>
+  
+  <footer>
+    <p>Desenvolvido por <strong>Leo Freitas</strong>.</p>
+    <p>Instituto Federal de São Paulo - São Carlos</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

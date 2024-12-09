@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --cor-primaria: #191627;
+  --cor-secundaria: #DD7631;
+  --cor-hoover: #bb6125;
+  --cor-fundo: #f9f9f9;
+  --cor-texto: #ffffff;
+  --cor-texto-hover: #191627;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background-color: var(--cor-fundo);
+}
+
+header, main, aside, footer {
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  grid-area: main;
+  margin-left: 30px;
+  text-align: center;
+}
+
+aside {
+  width: 80%;
+  color: var(--cor-texto);
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cadastro, .filtros, .grafico {
+  background-color: var(--cor-primaria);
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.chart-container {
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.org {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.field {
+  text-align: left;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.titulo-tabela {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: none;
+}
+
+input:hover {
+  border: 2px solid var(--cor-secundaria);
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-hoover);
+}
+
+.campoBuscaContainer {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+
+.campoBusca {
+  border-radius: 15px;
+  width: auto;
+  height: 30px;
+}
+
+.btn_buscar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--cor-texto);
+}
+
+.btn_buscar i {
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px var(--cor-primaria);
+}
+
+th, td {
+  padding: 10px 25px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+}
