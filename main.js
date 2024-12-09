@@ -1,7 +1,7 @@
 $(document).ready(function () {
   const urlApi = "https://ifsp.ddns.net/webservices/boletim/";
   const ctx = document.getElementById('graficoPizza').getContext('2d');
-  let graficoPizza; // Declara o gráfico fora das funções para acesso global
+  let graficoPizza;
 
   carregarTodosAlunos();
 
